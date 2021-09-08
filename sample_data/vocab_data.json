@@ -3,30 +3,35 @@
     "firebaseKey": "MoPe",
     "category" : "Tech",
     "definition" : "In computer programming, asynchronous operation means that a process operates independently of other processes, whereas synchronous operation means that the process runs only as a result of some other process being completed or handed off. ",
-    "title" : "Asynchronous Programming"
+    "title" : "Asynchronous Programming",
+    "timestamp": "2020-07-01T14:43:13.389Z"
   }, 
   "PoPe": {
     "firebaseKey": "PoPe",
     "category" : "Language",
-    "definition" : "A Promise is a proxy for a value not necessarily known when the promise is created. It allows you to associate handlers with an asynchronous action's eventual success value or failure reason. This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a promise to supply the value at some point in the future.",
-    "title" : "Promises"
+    "definition" : "A Promise is a proxy for a value not necessarily known when the promise is created. It allows you to associate handlers with an asynchronous action's eventual success value or failure reason.",
+    "title" : "Promises",
+    "timestamp": "2018-03-21T06:14:23.467Z"
   },
   "CoPe": {
     "firebaseKey": "CoPe",
     "category" : "Tech",
-    "definition" : "The single-responsibility principle (SRP) is a computer-programming principle that states that every module, class or function in a computer program should have responsibility over a single part of that program's functionality, and it should encapsulate that part. All of that module, class or function's services should be narrowly aligned with that responsibility.",
-    "title" : "Single Responsibility Principle"
+    "definition" : "The single-responsibility principle (SRP) is a computer-programming principle that states that every module, class or function in a computer program should have responsibility over a single part of that program's functionality, and it should encapsulate that part.",
+    "title" : "Single Responsibility Principle",
+    "timestamp": "2021-06-07T10:34:55.333Z"
   },
   "LoPe": {
     "firebaseKey": "LoPe",
     "category" : "Tech",
-    "definition" : "The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.",
-    "title" : "Document Object Model (DOM)"
+    "definition" : "The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content.",
+    "title" : "Document Object Model (DOM)",
+    "timestamp": "2018-01-09T21:30:44.988Z"
   }, 
   "ToPe": {
     "firebaseKey": "ToPe",
     "category" : "Tech",
-    "definition" : "An API (Application Programming Interface) is a set of features and rules that exist inside a software program (the application) enabling interaction with it through software - as opposed to a human user interface. The API can be seen as a simple contract (the interface) between the application offering it and other items, such as third party software or hardware.  In Web development, an API is generally a set of code features (e.g. methods, properties, events, and URLs) that a developer can use in their apps for interacting with components of a user's web browser, or other software/hardware on the user's computer, or third party websites and services.",
-    "title" : "Application Programming Interface (API)"
+    "definition" : "An API (Application Programming Interface) is a set of features and rules that exist inside a software program (the application) enabling interaction with it through software - as opposed to a human user interface.",
+    "title" : "Application Programming Interface (API)",
+    "timestamp": "2021-07-22T13:05:33.111Z"
   }
 }

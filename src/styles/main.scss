@@ -11,6 +11,7 @@ body {
 
 #home {
   display: flex;
+  flex-wrap: wrap;
   color: black;
 }
 
@@ -18,4 +19,11 @@ body {
   text-align: left;
   margin: 5px;
   width: 300px;
+}
+
+#form-container {
+  width: 70%;
+  margin: auto;
+  justify-content: center;
+  color: white;
 }
