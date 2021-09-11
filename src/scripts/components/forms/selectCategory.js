@@ -7,7 +7,7 @@ const selectCategory = (userId) => {
 
   getAllVocabTerms(userId).then((vocabArray) => {
     vocabArray.forEach((vocab) => {
-      domString += `<option value="${vocab.firebaseKey}" ${vocab === vocab.firebaseKey ? 'selected' : ''}>${vocab.category}</option>`;
+      domString += `<option value="${vocab.firebaseKey}" ${vocab.category ? 'selected' : ''}>${vocab.category}</option>`;
     });
 
     domString += '</select>';

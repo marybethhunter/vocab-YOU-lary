@@ -60,21 +60,32 @@ const filterByTech = (userId) => new Promise((resolve, reject) => {
     }).catch(reject);
 });
 
-// SORT FUNCTION
-const sortBy = (array) => {
-  const sortType = document.querySelector('#sort-dropdown');
-  let sortedCards = 'null';
-  if (sortType === 'alphabetically') {
-    sortedCards = array.sort((a, b) => a.title > b.title);
-  }
-  if (sortType === 'newest') {
-    sortedCards = array.sort((a, b) => b.timestamp.localeCompare(a.timestamp));
-  }
-  if (sortType === 'oldest') {
-    sortedCards = array.sort((a, b) => a.timestamp.localeCompare(b.timestamp));
-  }
-  return sortedCards;
-};
+// SORT ABC
+const sortABC = (userId) => new Promise((resolve, reject) => {
+  getAllVocabTerms(userId)
+    .then((userCardsArray) => {
+      const sortedCards = userCardsArray.sort((a, b) => (a.title > b.title ? 1 : -1));
+      resolve(sortedCards);
+    }).catch(reject);
+});
+
+// SORT NEWEST
+const sortNewest = (userId) => new Promise((resolve, reject) => {
+  getAllVocabTerms(userId)
+    .then((userCardsArray) => {
+      const sortedCards = userCardsArray.sort((a, b) => b.timestamp.localeCompare(a.timestamp));
+      resolve(sortedCards);
+    }).catch(reject);
+});
+
+// SORT OLDEST
+const sortOldest = (userId) => new Promise((resolve, reject) => {
+  getAllVocabTerms(userId)
+    .then((userCardsArray) => {
+      const sortedCards = userCardsArray.sort((a, b) => a.timestamp.localeCompare(b.timestamp));
+      resolve(sortedCards);
+    }).catch(reject);
+});
 
 // SEARCH CARDS
 const searchCards = (searchValue) => new Promise((resolve, reject) => {
@@ -92,5 +103,7 @@ export {
   filterByLang,
   filterByTech,
   searchCards,
-  sortBy
+  sortABC,
+  sortNewest,
+  sortOldest
 };
