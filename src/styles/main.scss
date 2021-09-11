@@ -11,11 +11,35 @@ body {
 
 #home {
   display: flex;
+  flex-wrap: wrap;
   color: black;
+  justify-content: center;
 }
 
 .card {
   text-align: left;
   margin: 5px;
   width: 300px;
+  background-color: lightgray;
+}
+
+#form-container {
+  width: 70%;
+  margin: auto;
+  justify-content: center;
+  color: white;
+}
+
+.sorting, 
+.search {
+  width: 300px;
+  background-color: lightgray;
+}
+
+.sorting {
+  margin: auto;
+}
+
+.btn {
+  margin: 5px;
 }
