@@ -1,4 +1,5 @@
 const showVocabCards = (array) => {
+  document.querySelector('#home').innerHTML = '';
   document.querySelector('#form-container').innerHTML = '';
   array.forEach((word) => {
     document.querySelector('#home').innerHTML += `

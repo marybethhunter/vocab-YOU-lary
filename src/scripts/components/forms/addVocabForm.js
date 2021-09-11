@@ -1,23 +1,24 @@
-const addVocabForm = (obj = {}) => {
+import selectCategory from './selectCategory';
+
+const addVocabForm = (userId, obj = {}) => {
   document.querySelector('#home').innerHTML = '';
+  document.querySelector('#sort-dropdown').innerHTML = '';
   document.querySelector('#filter-buttons').innerHTML = '';
   document.querySelector('#form-container').innerHTML = `
-  <form id="submit-vocab-form" class="mb-4">
+  <form id="${obj.firebaseKey ? `update-vocab--${obj.firebaseKey}` : 'submit-vocab'}" class="mb-4">
   <div class="form-group">
     <label for="title">Vocabulary Term:</label>
-    <input type="text" class="form-control" id="title" aria-describedby="vocabTitle" placeholder="Enter Vocabulary Term" required>
+    <input type="text" class="form-control" id="title" aria-describedby="vocabTitle" placeholder="Enter Vocabulary Term" value="${obj.title || ''}" required>
   </div>
   <div class="form-group">
     <label for="definition">Vocabulary Term:</label>
-    <input type="text" class="form-control" id="definition" aria-describedby="vocabDefinition" placeholder="Enter Vocabulary Definition" required>
+    <input type="text" class="form-control" id="definition" aria-describedby="vocabDefinition" placeholder="Enter Vocabulary Definition" value="${obj.definition || ''}" required>
   </div>
-  <div class="form-group">
-    <label for="category">Vocabulary Category (Language/Tech):</label>
-    <input type="text" class="form-control" id="category" aria-describedby="vocabCategory" placeholder="Enter Vocabulary Category" required>
-  </div>
-  <button type="submit" id="${obj.firebaseKey ? `update-vocab--${obj.firebaseKey}` : 'submit-vocab'}" class="btn btn-success">Submit Vocabulary Entry</button>
+  <div class="form-group" id="select-category"></div>
+  <button type="submit" class="btn btn-success">Submit Vocabulary Entry</button>
   </form>
   `;
+  selectCategory(userId, `${obj.category}`);
 };
 
 export default addVocabForm;
