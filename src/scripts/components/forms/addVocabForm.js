@@ -18,7 +18,7 @@ const addVocabForm = (userId, obj = {}) => {
   <button type="submit" class="btn btn-success">Submit Vocabulary Entry</button>
   </form>
   `;
-  selectCategory(userId, `${obj.category}`);
+  selectCategory(userId, `${obj.category || ''}`);
 };
 
 export default addVocabForm;

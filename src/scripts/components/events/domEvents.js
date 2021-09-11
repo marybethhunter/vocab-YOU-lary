@@ -5,12 +5,14 @@ import {
   getSingleCard,
   filterByTech,
   filterByLang,
-  sortBy,
-  getAllVocabTerms
+  sortABC,
+  sortNewest,
+  sortOldest
 } from '../../helpers/data/vocabCardsData';
 import filterButtons from '../filterButtons';
 import addVocabForm from '../forms/addVocabForm';
 import showVocabCards from '../showVocabCards';
+import sortDropdown from '../sortDropdown';
 
 const domClickEvents = (uid) => {
   document.querySelector('#app')
@@ -25,7 +27,7 @@ const domClickEvents = (uid) => {
 
       if (e.target.id.includes('edit-vocab')) {
         const [, id] = e.target.id.split('--');
-        getSingleCard(id).then((vocabObj) => addVocabForm(vocabObj));
+        getSingleCard(id).then((vocabObj) => addVocabForm(vocabObj.uid, vocabObj));
       }
 
       if (e.target.id.includes('techFilter')) {
@@ -37,10 +39,17 @@ const domClickEvents = (uid) => {
       }
     });
 
-  document.querySelector('#main-container')
-    .addEventListener('change', (e) => {
-      if (e.target.id.includes('sort-dropdown')) {
-        getAllVocabTerms(uid).then((array) => sortBy(array)).then((array) => showVocabCards(array, uid));
+  document.querySelector('#sortDropdown')
+    .addEventListener('change', () => {
+      const dropDown = document.querySelector('#sortDropdown').value;
+      if (dropDown === 'alphabetically') {
+        sortABC(uid).then(showVocabCards);
+      }
+      if (dropDown === 'newest') {
+        sortNewest(uid).then(showVocabCards);
+      }
+      if (dropDown === 'oldest') {
+        sortOldest(uid).then(showVocabCards);
       }
     });
 };
@@ -59,6 +68,7 @@ const domSubmitEvents = (uid) => {
         };
         createVocabTerm(newVocab).then(showVocabCards);
         filterButtons();
+        sortDropdown();
       }
 
       if (e.target.id.includes('update-vocab')) {
@@ -74,6 +84,7 @@ const domSubmitEvents = (uid) => {
         };
         updateVocabTerm(vocabObject).then(showVocabCards);
         filterButtons();
+        sortDropdown();
       }
     });
 };

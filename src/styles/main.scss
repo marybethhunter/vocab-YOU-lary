@@ -21,6 +21,7 @@ body {
   margin: 5px;
   width: 300px;
   background-color: lightgray;
+  height: 450px;
 }
 
 #form-container {
@@ -42,4 +43,9 @@ body {
 
 .btn {
   margin: 5px;
+}
+
+.icon-btns {
+  position: absolute; 
+  bottom: 0
 }
