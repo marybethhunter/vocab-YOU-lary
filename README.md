@@ -20,7 +20,7 @@
 
 #### -Authentication: The user will have to log in to the app with Google. This is done through Google Firebase.
 
-### [Loom video walkthrough]()
+### [Loom video walkthrough](https://www.loom.com/share/3e1c7a2faf004449b61c4fb1d758cbd8)
 
 ### Relevant Links:
 #### -[Figma Wireframe](https://www.figma.com/file/IW4jF3GnzCFLYbEXlgFNIZ/MVP?node-id=0%3A1)
@@ -44,8 +44,9 @@ const createVocabTerm = (newVocab) => new Promise((resolve, reject) => {
 
 ### Screenshots:
 
-<img width="960" alt="2021-08-06 (1)" src="">
+<img width="958" alt="2021-09-11" src="https://user-images.githubusercontent.com/86667443/132959169-6a39aab0-b2b9-467c-89a7-3650688e0734.png">
 
-<img width="913" alt="2021-08-06 (2)" src="">
+<img width="907" alt="2021-09-11 (1)" src="https://user-images.githubusercontent.com/86667443/132959160-994f3e06-53f8-497f-9ce4-32cd115a9dfc.png">
+
 
 ### Contributors: [Mary Beth Hunter](https://github.com/marybethhunter)
